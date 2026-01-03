@@ -88,7 +88,7 @@ To increase H1N1 vaccination rates, the National Public Health Department should
 ## For More Information
 See the full analysis in the [Jupyter Notebook](./Your_Notebook_Name.ipynb) or review the [Presentation](./Your_Presentation.pdf).
 
-**Contact:** [Your Name] | [Your Email] | [Your LinkedIn]
+**Contact:** [Valary Kones] | [valarykones@gmail.com] | [Your LinkedIn]
 
 ---
 
