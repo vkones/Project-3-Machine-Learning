@@ -56,12 +56,12 @@ We used 4 Models:
 
 ### Model Performance Comparison
 
-| Model Iteration                  | Train AUC | Test AUC | CV Mean AUC | Overfit Gap |
-|----------------------------------|-----------|----------|-------------|-------------|
-| **Baseline Logistic Regression** | **0.835** | **0.824** | **0.832** | 0.010 |
-| **Tuned Logistic Regression** ⭐ | 0.834 | 0.824 | 0.831 | **0.010** |
-| Vanilla Decision Tree (dt1)      | 0.824 | 0.807 | 0.817 | 0.017 |
-| Tuned Decision Tree              | 0.823 | 0.810 | 0.817 | 0.013 |
+| Model Iteration                |   Train AUC |   Test AUC |   CV Mean AUC |   Overfit Gap |
+|:-------------------------------|------------:|-----------:|--------------:|--------------:|
+| **Baseline (Logistic Regression)** |      **0.8346** |     **0.8242** |        **0.8317** |        0.0104 |
+| **Tuned Logistic Regression** ⭐    |      0.8337 |     0.824  |        0.8313 |        **0.0097** |
+| Vanilla Decision Tree (dt1)    |      0.8236 |     0.807  |        0.8168 |        0.0166 |
+| Tuned Decision Tree            |      0.823  |     0.8095 |        0.8169 |        0.0134 |
 
 ⭐ *Best overall model based on ROC-AUC and generalization performance*
 
