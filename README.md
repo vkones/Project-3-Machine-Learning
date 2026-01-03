@@ -31,6 +31,7 @@ ROC-AUC was selected because the H1N1 vaccination dataset is imbalanced and vacc
 |-------------------|------------|
 | Not Vaccinated (0) | 78.8% |
 | Vaccinated (1) | 21.2% |
+
 ## EDA
 Initially, I examined demographic factors like Age and Education, but found they only accounted for a 2-5% difference in vaccination rates. This led me to pivot my analysis toward behavioral and opinion-based features, where I found much stronger indicators and revealed several critical insights:
 * **Doctor Recommendations:** We compared health worker status vs Doctor Recommendations to see the impact of Doctor's recommendation on vaccination rates. A preliminary look showed a massive gap; patients with a recommendation were significantly more likely to be vaccinated.
@@ -47,9 +48,27 @@ Initially, I examined demographic factors like Age and Education, but found they
 
 ## Models
 We prioritized **interpretability** and **AUC-ROC** to ensure our model not only predicts accurately but also provides explainable evidence for stakeholders.
+We used 4 Models:
+ 1. Logistic Regression (Base Model)
+ 2. Tuned Logistic Regression
+ 3. Vanilla Decision Tree
+ 4. Tuned Desicion Tree
+
+### Model Performance Comparison
+
+| Model Iteration                  | Train AUC | Test AUC | CV Mean AUC | Overfit Gap |
+|----------------------------------|-----------|----------|-------------|-------------|
+| **Baseline Logistic Regression** | **0.835** | **0.824** | **0.832** | 0.010 |
+| **Tuned Logistic Regression** ⭐ | 0.834 | 0.824 | 0.831 | **0.010** |
+| Vanilla Decision Tree (dt1)      | 0.824 | 0.807 | 0.817 | 0.017 |
+| Tuned Decision Tree              | 0.823 | 0.810 | 0.817 | 0.013 |
+
+⭐ *Best overall model based on ROC-AUC and generalization performance*
+
 
 ### Final Model
-Our final **Tuned Logistic Regression** model significantly outperformed the baseline by optimizing the $C$ parameter and using a balanced class weight.
+Our final **Tuned Logistic Regression** model significantly outperformed the baseline by optimizing the $C$ parameter and using a balanced class weight. It also had the smallest overfit
+gap.
 * **Key Metric:** Final Model achieved a **ROC-AUC of [Insert Score]**.
 * **Feature Impact:** The model revealed that a doctor's recommendation is the strongest predictor, followed by the perceived effectiveness of the vaccine.
 
