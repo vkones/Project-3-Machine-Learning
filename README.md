@@ -1,6 +1,6 @@
 # H1N1 Vaccination Analysis: Identifying Key Drivers for Public Health
 
-**Project Contributor:** Valary Kones  
+**Project by:** Valary Kones  
 **Technical Stack:** Python, Scikit-Learn, Pandas, Matplotlib, NumPy
 
 ---
@@ -25,10 +25,18 @@ The dataset is derived from the **National 2009 H1N1 Flu Survey**.
 * **Tuning:** Performed `GridSearchCV` to optimize regularization strength ($C$) and penalty types ($L1$ vs $L2$).
 
 ## EDA
-Our exploratory analysis revealed several critical insights:
-* **Doctor Recommendations:** A preliminary look showed a massive gap; patients with a recommendation were significantly more likely to be vaccinated.
-* **Risk Perception:** There is a direct correlation between perceived personal risk of the virus and the likelihood of seeking vaccination.
-* **Safety Barriers:** Concerns about side effects and "getting sick from the vaccine" were identified as primary deterrents.
+Initially, I examined demographic factors like Age and Education, but found they only accounted for a 2-5% difference in vaccination rates. This led me to pivot my analysis toward behavioral and opinion-based features, where I found much stronger indicators and revealed several critical insights:
+* **Doctor Recommendations:** We compared health worker status vs Doctor Recommendations to see the impact of Doctor's recommendation on vaccination rates. A preliminary look showed a massive gap; patients with a recommendation were significantly more likely to be vaccinated.
+
+![img](./Images/HW_Status_Vs_Doc_rec.png)
+
+* **Risk Perception:** There is a direct correlation between perceived personal risk of the virus and the likelihood of seeking vaccination.Individuals who perceive their risk as "Low" (1 or 2) have a vaccination rate below 17%. Conversely, those who perceive their risk as "Very High" (5) have a vaccination rate exceeding 50%. This suggests that many people skip the vaccine not because they are "anti-vax," but because they simply don't believe the virus poses a threat to them personally.
+
+![img](./Images/VR%20_vs_opp_of_%20H1n1_risk.png)
+
+* **Opinion on Vaccine Effectiveness:** There is a "threshold effect" regarding trust in the vaccine. Vaccination rates remain stagnant and low for anyone who rates effectiveness between 1 and 3. However, there is a massive surge in uptake once an individual’s confidence reaches a "4" or "5." Essentially, if a person isn't fully convinced the vaccine is highly effective, they are unlikely to take the "risk" or effort to get it.
+
+![img](./Images/Vaccination_rate_vs_opp_of_veffectiveness.png)
 
 ## Models
 We prioritized **interpretability** and **AUC-ROC** to ensure our model not only predicts accurately but also provides explainable evidence for stakeholders.
