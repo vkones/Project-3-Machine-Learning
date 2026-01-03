@@ -94,12 +94,19 @@ See the full analysis in the [Jupyter Notebook](./Your_Notebook_Name.ipynb) or r
 
 ## Project Structure
 ```text
-├── README.md
 ├── Data/
 │   ├── training_set_features.csv
 │   └── training_set_labels.csv
-├── Notebooks/
-│   ├── Vaccination_EDA.ipynb
-│   └── Vaccination_Modeling.ipynb
+├── Images/
+│   ├── baseline_ROC_Curve.png
+|   ├── class_imbalance.png
+|   ├── Confusion_Matrix.png
+|   ├── H1N1_Vaccine.jpg
+|   ├── HW_Status_Vs_Doc_rec.png
+|   ├── log_odds.png
+|   ├── Odds Ratios.png
+|   ├── Vaccination_rate_vs_opp_ofveffectiveness.png
+│   └── VR_vs_opp_of_H1N1_risk.png
+├── index.ipynb
 ├── Vaccination_Presentation.pdf
-└── .gitignore
+└── README.md
