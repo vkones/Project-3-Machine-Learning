@@ -7,7 +7,7 @@
 
 ## Overview
 <p align="center">
-  <img src="Images/H1N1_vaccine.jpg" width="95%"/>
+  <img src="Images/H1N1_Vaccine.jpg" width="95%"/>
 </p>
 The goal of this project is to provide the **National Public Health Department** with actionable insights into the factors that influence H1N1 vaccination uptake. By building a predictive model, we identify the behavioral, clinical, and demographic drivers that can be used to design targeted public health campaigns and increase vaccination rates.
 
