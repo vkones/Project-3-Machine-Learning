@@ -75,20 +75,33 @@ gap.
 ![img](./Images/log_odds.png)
 
 ## Conclusion
-To increase H1N1 vaccination rates, the National Public Health Department should:
-* **Empower Clinicians:** Develop "Provider Prompt" programs, as a doctor's recommendation more than doubles the odds of vaccination.
-* **Address Safety Fears:** Create targeted messaging to debunk the myth that the vaccine causes the flu (addressing the `opinion_seas_sick_from_vacc` factor).
-* **Highlight Effectiveness:** Shift the narrative toward the vaccine’s proven efficacy to boost public confidence.
+## Conclusion
+Based on the model results and exploratory analysis, the following interventions are most likely to increase H1N1 vaccination uptake:
+
+- **Leverage the “Doctor Effect”:**  
+  A doctor’s recommendation is the strongest predictor of vaccination in the model. Interventions such as automated provider reminders or structured vaccine discussions during visits are likely to yield the highest impact.
+
+- **Correct Safety Misconceptions:**  
+  The negative coefficient on `opinion_seas_sick_from_vacc` indicates that fear of becoming ill from the vaccine significantly suppresses uptake. Public messaging should explicitly address this misconception rather than relying on generic pro-vaccine slogans.
+
+- **Target Low Risk Perception, Not Demographics:**  
+  Age and education showed relatively small differences in vaccination rates during EDA. In contrast, perceived personal risk had a much larger effect. Resources should therefore prioritize individuals who rate their H1N1 risk as “low,” as shifting risk perception produces a greater increase in vaccination odds than demographic targeting alone.
+
 
 ## Next Steps
-* **Advanced Modeling:** Explore Random Forest or XGBoost to capture non-linear interactions between demographic features.
-* **Interaction Terms:** Investigate if the impact of doctor recommendations varies significantly across different age groups or education levels.
-* **Deployment:** Build a simplified risk-assessment dashboard for clinics to identify "low-probability" patients for proactive outreach.
+- **Model Extensions (Controlled Complexity):**  
+  Explore interaction terms (e.g., risk perception × doctor recommendation) within Logistic Regression before introducing black-box models.
+
+- **Threshold Optimization:**  
+  Identify optimal probability cutoffs for different public health scenarios (e.g., limited outreach capacity vs. mass campaigns).
+
+- **Operationalization:**  
+  Develop a lightweight risk-scoring tool that clinics can use to flag patients most likely to benefit from proactive vaccine counseling.
 
 ## For More Information
-See the full analysis in the [Jupyter Notebook](./Your_Notebook_Name.ipynb) or review the [Presentation](./Your_Presentation.pdf).
+See the full analysis in the [Jupyter Notebook](./index.ipynb) or review the [Presentation](./Your_Presentation.pdf).
 
-**Contact:** [Valary Kones] | [valarykones@gmail.com] | [Your LinkedIn]
+**Contact:** [Valary Kones] | [valarykones@gmail.com] | [www.linkedin.com/in/valary-kones-313a11180]
 
 ---
 
