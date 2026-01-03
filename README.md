@@ -69,10 +69,10 @@ We used 4 Models:
 ### Final Model
 Our final **Tuned Logistic Regression** model significantly outperformed the baseline by optimizing the $C$ parameter and using a balanced class weight. It also had the smallest overfit
 gap.
-* **Key Metric:** Final Model achieved a **ROC-AUC of [Insert Score]**.
+* **Key Metric:** Final Model achieved a **ROC-AUC of [0.8337]**.
 * **Feature Impact:** The model revealed that a doctor's recommendation is the strongest predictor, followed by the perceived effectiveness of the vaccine.
 
-
+![img](./Images/log_odds.png)
 
 ## Conclusion
 To increase H1N1 vaccination rates, the National Public Health Department should:
