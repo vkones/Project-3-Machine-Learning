@@ -23,7 +23,14 @@ The dataset is derived from the **National 2009 H1N1 Flu Survey**.
 * **Baseline:** Logistic Regression using `liblinear` solver.
 * **Preprocessing:** Utilized `StandardScaler` within a `Pipeline` to normalize numerical features and handled categorical variables via encoding.
 * **Tuning:** Performed `GridSearchCV` to optimize regularization strength ($C$) and penalty types ($L1$ vs $L2$).
+* **Evaluation Metric**: ROC-AUC
+ROC-AUC was selected because the H1N1 vaccination dataset is imbalanced and vaccination outreach decisions depend on ranking individuals by likelihood rather than making a single yes/no prediction. It provides a threshold-independent measure of performance that aligns with public health screening and targeting objectives.
+### Dataset Class Distribution
 
+| Vaccination Status | Percentage |
+|-------------------|------------|
+| Not Vaccinated (0) | 78.8% |
+| Vaccinated (1) | 21.2% |
 ## EDA
 Initially, I examined demographic factors like Age and Education, but found they only accounted for a 2-5% difference in vaccination rates. This led me to pivot my analysis toward behavioral and opinion-based features, where I found much stronger indicators and revealed several critical insights:
 * **Doctor Recommendations:** We compared health worker status vs Doctor Recommendations to see the impact of Doctor's recommendation on vaccination rates. A preliminary look showed a massive gap; patients with a recommendation were significantly more likely to be vaccinated.
