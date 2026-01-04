@@ -75,7 +75,6 @@ gap.
 ![img](./Images/log_odds.png)
 
 ## Conclusion
-## Conclusion
 Based on the model results and exploratory analysis, the following interventions are most likely to increase H1N1 vaccination uptake:
 
 - **Leverage the “Doctor Effect”:**  
