@@ -98,7 +98,7 @@ Based on the model results and exploratory analysis, the following interventions
   Develop a lightweight risk-scoring tool that clinics can use to flag patients most likely to benefit from proactive vaccine counseling.
 
 ## For More Information
-See the full analysis in the [Jupyter Notebook](./index.ipynb) or review the [Presentation](./Your_Presentation.pdf).
+See the full analysis in the [Jupyter Notebook](./index.ipynb) or review the [Presentation](./Presentation.pdf).
 
 **Contact:** [Valary Kones] | [valarykones@gmail.com] | [www.linkedin.com/in/valary-kones-313a11180]
 
@@ -120,5 +120,5 @@ See the full analysis in the [Jupyter Notebook](./index.ipynb) or review the [Pr
 |   ├── Vaccination_rate_vs_opp_ofveffectiveness.png
 │   └── VR_vs_opp_of_H1N1_risk.png
 ├── index.ipynb
-├── Vaccination_Presentation.pdf
+├── Presentation.pdf
 └── README.md
